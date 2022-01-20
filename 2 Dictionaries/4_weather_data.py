@@ -14,3 +14,11 @@ if weather_data.status_code == 200:
     for k,v in data.items():
         print(k, v)
 
+
+def get_current_temp_by_city(city):
+    # return temp in celcius
+    pass
+
+def get_current_condition_by_city(city):
+    # description, feels like, wind etc.
+    pass
