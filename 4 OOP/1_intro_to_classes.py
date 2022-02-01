@@ -6,7 +6,7 @@ class House:
     # METHODS
     behaviour: open_garage_door(), mow_lawn(), clean_up()
     """
-    def __init__(self, street_address, rooms_count, house_price, is_for_sale):
+    def __init__(self, street_address, rooms_count, house_price:float, is_for_sale):
         self.address = street_address
         self.rooms = rooms_count
         self.price = house_price
