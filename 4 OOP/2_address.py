@@ -26,4 +26,3 @@ home_address = Address(street="101 random st",
                        country='India')
 
 print(work_address.to_string())
-print(home_address.to_string())
