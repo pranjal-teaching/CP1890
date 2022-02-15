@@ -10,10 +10,8 @@ class Dog:
 
     @dog_age.setter
     def dog_age(self, new_age):
-        if new_age > self.dog_age:
-            self.__age = new_age
-        else:
-            raise ValueError(f'New age must be greater than current age.')
+        assert new_age > self.dog_age, 'New age must be greater than current age'
+        self.__age = new_age
 
     def bark(self):
         print('🐕 Woof woof')
