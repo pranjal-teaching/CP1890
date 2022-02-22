@@ -22,7 +22,7 @@ class Goblin(Monster):
 
     @property
     def gold(self):
-        return self.gold
+        return self.__gold
 
 
 class FriendlyGoblin(Goblin):
@@ -34,13 +34,18 @@ class FriendlyGoblin(Goblin):
     def charge(self):
         print(f'Here comes a huge fuzzy hug. How fuzzy? {self.fuzzy} fuzzy...')
 
+    # Function Overriding!!!
+    def steal_gold(self, how_much_gold):
+        print(f'Here you dropped your {how_much_gold} gold')
+
 
 m1 = Monster(hitpoints=10, damage=26, range=15)
 m2 = Monster(hitpoints=5, damage=10, range=100)
 g1 = Goblin(hitpoints=12, damage=20, range=10, country_of_origin="England")
 
 g1.charge()
-
+g1.steal_gold(40)
+print("Gold = ",g1.gold)
 
 fg1 = FriendlyGoblin(hitpoints=30,
                      damage=0,
@@ -50,7 +55,9 @@ fg1 = FriendlyGoblin(hitpoints=30,
 
 # print(m1.range)
 print(g1.range)
-
+print("Gold = ",fg1.gold)
+fg1.steal_gold(60)
+print("Gold = ",fg1.gold)
 # print(m1.country_of_origin)
 print(g1.country_of_origin)
 
