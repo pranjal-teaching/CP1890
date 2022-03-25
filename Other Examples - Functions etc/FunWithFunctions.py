@@ -1,3 +1,4 @@
+#1
 #Functions are first-class objects - they can be passed around and used as arguments
 def say_hello(name):
     return f"Hello {name}"
@@ -8,11 +9,11 @@ def be_awesome(name):
 def greet_bob(greeter_func):
     return greeter_func("Bob")
 
-print(greet_bob(say_hello))
-print(greet_bob(be_awesome))
+#print(greet_bob(say_hello))
+#print(greet_bob(be_awesome))
 
 
-
+#2
 #functions can contain other functions (inner functions)
 def parent():
     print("Printing from the parent() function")
@@ -26,9 +27,14 @@ def parent():
     second_child()
     first_child()
 
-parent()
+def first_child():
+    print("Printing from the first_child() outer function")
+
+#parent()
+#first_child()
 
 
+#3
 #You can use functions as return values
 def parent(num):
     def first_child():
@@ -42,5 +48,4 @@ def parent(num):
     else:
         return second_child()
 
-parentstr = parent(1)
-print(parentstr)
+print(parent(2))
