@@ -15,7 +15,7 @@ def close():
 
 root = tk.Tk()
 root.title("Future Value Calculater")
-root.geometry("300x200")
+root.geometry("500x300")
 
 frame = ttk.Frame(root, padding="10 10 10 10")
 frame.pack(fill=tk.BOTH, expand=True)
